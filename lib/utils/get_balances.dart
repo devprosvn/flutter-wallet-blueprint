@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 
 Future<String> getBalances(String address, String chain) async {
-  final url = Uri.http('192.168.100.47:5002', '/get_token_balance', {
+  final url = Uri.https('https://devpros.pythonanywhere.com', '/get_token_balance', {
     'address': address,
     'chain': chain,
   });
